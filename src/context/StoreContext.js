@@ -111,6 +111,7 @@ export const StoreProvider = ({ children }) => {
     try {
       setIsLoading(true)
       console.log(lineItemId)
+      
       // const addItems = await client.checkout.addLineItems(
       //   checkout.id,
       //   lineItems

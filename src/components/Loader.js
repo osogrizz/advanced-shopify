@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
-import { animated, useTransition } from 'react-spring'
 import { StoreContext } from '../context/StoreContext'
+import { animated, useTransition } from 'react-spring'
+
+import Spinner from '../images/three-dots.svg'
 
 const Loader = () => {
 
@@ -25,11 +27,14 @@ const Loader = () => {
               left: 0,
               right: 0,
               bottom: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               background: 'var(--xtraPurp)',
               ...props
             }}
           >
-            Loading
+            <img src={Spinner} alt="loading"/>
           </animated.div> 
         )}
       </div>
